@@ -20,10 +20,10 @@
       fn.apply(context,arg1.concat(arg2));
     }
   }
-  //模拟bind函数
-  Function.prototype.myBind = function (context, ...arg) {
-    return function (...arg2) {
-      context.apply(arg.concat(arg2));
+//模拟bind函数
+Function.prototype.myBind = function (context, ...arg) {
+  return function (...arg2) {
+    context.apply(arg.concat(arg2));
     };
   };
 
