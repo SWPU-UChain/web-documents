@@ -69,7 +69,7 @@ http://lynnelv.github.io/js-event-loop-nodejs
     
 第三阶段：idle, prepare 阶段
 
-    仅node内部使用
+    仅node内部使用,process属于这个阶段
 
 第四阶段：poll阶段
     

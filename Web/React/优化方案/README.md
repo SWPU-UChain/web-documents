@@ -40,4 +40,6 @@
              
              })
              .call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
-    4、     
+    4、DOM渲染层与GPU硬件加速：
+           过程：
+                1、浏览器先获取dom树并根据  

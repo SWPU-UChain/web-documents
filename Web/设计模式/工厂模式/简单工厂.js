@@ -1,18 +1,7 @@
-//modules
-import React, {Component} from 'react';
-
-//components
-
-class Index extends Component {
-  constructor(props) {
-    super(props);
-  };
-
-  render() {
-    return (
-
-    )
-  }
+function People(name, age, sex) {
+  this.name = name;
+  this.age = age;
+  this.sex = sex;
 }
 
-export default Index;
+let people = new People('ltp', 22, 'man');
