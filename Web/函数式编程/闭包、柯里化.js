@@ -24,8 +24,8 @@
 Function.prototype.myBind = function (context, ...arg) {
   return function (...arg2) {
     context.apply(arg.concat(arg2));
-    };
   };
+};
 
 //柯里化缺陷：函数式编程的性能问题
 //优势：多次传参，参数分流，函数延后执行，写法便于观察

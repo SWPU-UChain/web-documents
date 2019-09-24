@@ -59,6 +59,16 @@ http://lynnelv.github.io/js-event-loop-nodejs
  
 ![浏览器中的Event Loop](http://lynnelv.github.io/img/article/event-loop/browser-excute-animate.gif)
     
+    1、浏览器中，每次微任务执行完毕，会判断document是否需要更新，因为浏览器是60HZ的刷新频率
+    2、判断是否有resize和rescroll事件
+    3、判断是否出发了media查询
+    4、更新动画并且发送事件
+    5、判断是否有全屏操作
+    6、执行requestAnimationFrame回调函数
+    7、执行IntersectionObserver回调函数
+    8、更新界面
+    9、以上就是一帧中可能会做的事情。如果在一帧中有空闲时间，就会去执行 requestIdleCallback 回调
+    
 第一阶段：timer阶段
 
     事件循环的第一个阶段，node会去检车有无过期的timer，如果有就将它压入任务队列中等待执行，由于主线程可能会被阻塞，所以timer不能保证在预设时间按时执行
@@ -86,11 +96,10 @@ http://lynnelv.github.io/js-event-loop-nodejs
 第六阶段：close callbacks阶段
 
     执行 socket 的 close 事件回调
-        
-    
+            
 使用场景：
 
-    I/O密集型：SSS
+    I/O密集型：适合IO密集型场景
     CPU密集型：需要合理配置node任务
     分布式应用
     
