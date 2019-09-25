@@ -12,6 +12,8 @@ react原理：https://react.jokcy.me/book/api/react.html
 
 学习资料：http://www.52studyit.com
 
+静态文件部署线上环境：https://www.netlify.com
+
 云盘：云盘精灵
 
 #### 常用库：
