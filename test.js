@@ -1,14 +1,25 @@
-const http = require('http');
-const server = http.createServer((req, res) => {
-    console.log(req.url);
-    if (req.url === '/') {
-        res.writeHead(200, {
-            'Content-Type': 'application/javascript;charset=utf-8'
-        });
-        res.end('function a(a={lll: 222}){console.log(a)}');
+let n = 2;
+let nums = '1 2';
+nums = nums.split(' ');
+let m = nums[0];
+let present = nums[0];
+let a = false;
+function count(n, nums) {
+    for (let i = 1; i< n; i ++) {
+        present = nums[i];
+        let max = present > m ? present : m;
+        let min = present < m ? present : m;
+        console.log(min)
+        console.log(max)
+        parseInt()
+        while (min <= max) {
+            if (min == max) {
+                a = true;
+            }
+            min = min * 2;
+        }
+        m = nums[i];
     }
-});
-// server
-server.listen(8000, function () {
-    console.log('listen to 8000');
-});
+    console.log(a === false ? 'NO' : 'YES');
+}
+count(n, nums);
